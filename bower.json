@@ -1,0 +1,18 @@
+{
+  "name": "angularjs-sg",
+  "version": "1.0.0",
+  "description": "AngularJS Study Group",  
+  "keywords": [
+    "Angular",
+    "Bootstrap",
+    "JQuery",
+    "Grunt"
+  ],
+
+  "dependencies": {
+  	"jquery": "2.1.1",
+  	"bootstrap" : "3.1.1",
+  	"angular" : "1.4.3",
+  	"angular-bootstrap": "0.13.0"
+  }
+}
