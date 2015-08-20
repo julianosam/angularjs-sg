@@ -10,8 +10,7 @@ body {
 
 }
 
-.list-group-header {
-	font-weight: 700;
+.list-group-header {	
 	background: #888;
 	color: #fff;
 }

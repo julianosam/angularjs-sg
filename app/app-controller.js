@@ -21,13 +21,15 @@
 			]
 		};
 
+		// Pushes a new task to the list
 		vm.pushTask = function(){
 			vm.taskList.tasks.push(vm.newTask);
 			vm.newTask = {};
 		};
 
-		vm.removeTask = function(index){
-			//var index = vm.taskList.tasks.indexOf(task);
+		// Removes a task from the list
+		vm.removeTask = function(task){
+			var index = vm.taskList.tasks.indexOf(task);
 			vm.taskList.tasks.splice(index, 1);
 		};
 
