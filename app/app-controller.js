@@ -9,7 +9,27 @@
 
 		var vm = this;
 
-		vm.greetingMsg = 'Hello World Angular from controller!';
+		vm.greetingMsg = 'Angular Tasks';
+		vm.newTask = {};
+
+		vm.taskList = {
+			title: 'My Task List',
+			tasks: [
+				{name: 'Task 1'},
+				{name: 'Task 2'},
+				{name: 'Task 3'}
+			]
+		};
+
+		vm.pushTask = function(){
+			vm.taskList.tasks.push(vm.newTask);
+			vm.newTask = {};
+		};
+
+		vm.removeTask = function(index){
+			//var index = vm.taskList.tasks.indexOf(task);
+			vm.taskList.tasks.splice(index, 1);
+		};
 
 	}
 	    

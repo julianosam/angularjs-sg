@@ -1,0 +1,17 @@
+body {
+	margin-top: 80px;
+}
+
+
+.grey-bg{
+
+	/* R G B */
+	background: #eee;
+
+}
+
+.list-group-header {
+	font-weight: 700;
+	background: #888;
+	color: #fff;
+}
