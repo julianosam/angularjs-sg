@@ -12,6 +12,8 @@
 
 
 	<body data-ng-controller="AppCtrl as appCtrl">
+
+		<!-- Top navbar -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
@@ -31,11 +33,11 @@
 			</div>
 		</nav>			
 
+		<!-- Body Containter -->
 		<div class="container">
-			
 
+			<!-- New task form -->
 			<div class="row">
-
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h3 class="panel-title">New task</h3>
@@ -63,6 +65,7 @@
 				</div>
 			</div>
 
+			<!-- Tasklist panel -->
 			<div class="row">
 				<ol class="list-group ">
 					<h4 class="list-group-item list-group-header" data-ng-bind="appCtrl.taskList.title"></h4>
@@ -87,8 +90,6 @@
 					
 				</ol>
 			</div>
-				
-
 		</div>
 
 
