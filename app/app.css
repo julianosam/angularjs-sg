@@ -1,0 +1,8 @@
+body {
+	margin: 20px;
+}
+
+.unsaved-task {
+	color: orange;
+	font-style: italic;
+}

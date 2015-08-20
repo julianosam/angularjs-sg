@@ -7,14 +7,37 @@
 
 	    <!-- Vendor Styles -->
 	    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+	    <!-- App Styles -->
+	    <link href="app/app.css" rel="stylesheet" type="text/css"/>
 	</head>
 
 
 	<body data-ng-controller="AppCtrl as appCtrl">
 
 		<div class="container-fluid">
-			<div class="row">
-				<h1>{{ appCtrl.greetingMsg }}</h1>
+			<div class="row">							
+				<h1 data-ng-bind="appCtrl.greetingMsg"></h1><hr/>
+
+				<div class="row">
+
+					<div class="col-md-3 tasklist-panel">
+
+						<input type="text" data-ng-model="appCtrl.nextTask.name" placeholder="New Task..."/>						
+						<button data-ng-click="appCtrl.pushTask()">Add</button>
+
+						<h3 data-ng-bind="appCtrl.taskList.title"></h3>
+						<ol>
+							<li data-ng-repeat="task in appCtrl.taskList.tasks">
+								{{task.name}} <a href="" data-ng-click="appCtrl.removeTask(task)">x</a>
+							</li>
+
+							<li class="unsaved-task" data-ng-show="appCtrl.nextTask.name"> {{appCtrl.nextTask.name}}</li>
+						</ol>
+
+
+					</div>
+				</div>
 			</div>
 		</div>
 
