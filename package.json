@@ -1,0 +1,20 @@
+{
+  "name": "angular-sg",
+  "version": "1.0.0",
+  "description": "Angular Tasks",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "github.com/julianosam/angularjs-sg"
+  },
+  
+  "keywords": [
+    "Angular",
+    "Bootstrap",
+    "JQuery"    
+  ],
+
+  "devDependencies": {  
+    "express": "~4.x.x"
+  }  
+}
