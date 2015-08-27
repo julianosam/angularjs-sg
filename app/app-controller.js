@@ -20,7 +20,7 @@
 		vm.pushTask = function(){
 			vm.taskList.tasks.push(vm.newTask);
 
-			Tasklist.update(vm.newTask);
+			Tasklist.update({ id: vm.taskList.id }, vm.taskList);
 			
 			vm.newTask = {};
 		};
