@@ -55,6 +55,17 @@
 		    							placeholder="Task name..."/>
 								</div>
 							</div>
+							<div class="form-group">						
+								<label class="col-sm-2 control-label" for="task-descr">Description</label>
+								<div class="col-sm-4">
+									<input 
+		    							id="task-descr" 
+		    							type="text" 
+		    							class="form-control"    						
+		    							data-ng-model="appCtrl.newTask.description" 
+		    							placeholder="Task description..."/>
+								</div>
+							</div>
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-4">
 									<button class="btn btn-default" data-ng-click="appCtrl.pushTask()">Add</button>
@@ -75,14 +86,14 @@
 					    	{{task.name}}
 					    	<span data-ng-click="appCtrl.removeTask(task)" class="glyphicon glyphicon-remove pull-right" aria-hidden="true"></span>
 					    </h4>
-    					<p class="list-group-item-text">Description here</p>
+    					<p class="list-group-item-text">{{task.description}}</p>
 					</a>
 
 					<a href="#" class="list-group-item"  data-ng-class="{'grey-bg': appCtrl.taskList.tasks.length % 2}" data-ng-if="appCtrl.newTask.name">
 						<h4 class="list-group-item-heading">
 					    	{{appCtrl.newTask.name}}					    	
 					    </h4>
-    					<p class="list-group-item-text">Description here</p>
+    					<p class="list-group-item-text">{{appCtrl.newTask.description}}</p>
 					</a>
 
 				</div>					
@@ -98,10 +109,12 @@
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.min.js"></script>
 
 		<!-- App Scripts -->
 		<script src="app/app.js"></script>
 		<script src="app/app-controller.js"></script>
+		<script src="app/tasklist.js"></script>
 
 
 	</body>

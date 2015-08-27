@@ -5,25 +5,23 @@
 	    .module('angularjs.sg')
 	    .controller('AppCtrl', AppCtrl);
 
-	function AppCtrl($scope){
+	AppCtrl.$inject	= ['$scope', 'Tasklist'];
+
+	function AppCtrl($scope, Tasklist){
 
 		var vm = this;
 
 		vm.greetingMsg = 'Angular Tasks';
 		vm.newTask = {};
 
-		vm.taskList = {
-			title: 'My Task List',
-			tasks: [
-				{name: 'Task 1'},
-				{name: 'Task 2'},
-				{name: 'Task 3'}
-			]
-		};
+		vm.taskList = Tasklist.get({id:0});
 
 		// Pushes a new task to the list
 		vm.pushTask = function(){
 			vm.taskList.tasks.push(vm.newTask);
+
+			Tasklist.update(vm.newTask);
+			
 			vm.newTask = {};
 		};
 

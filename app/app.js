@@ -7,6 +7,6 @@
     'use strict';
 	
 	angular
-	    .module('angularjs.sg', []);
+	    .module('angularjs.sg', ['ngResource']);
 	    
 })();
